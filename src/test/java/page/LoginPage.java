@@ -22,7 +22,12 @@ public class LoginPage {
                 .shouldBe(Condition.visible);
     }
 
-    public void BlockedSystemNotification() {
+    public void clickButton2Times() {
+        $("[data-test-id=action-login]").click();
+        $("[data-test-id=action-login]").click();
+    }
+
+    public void blockedSystemNotification() {
         $("[data-test-id=error-notification]")
                 .shouldHave(text("Доступ заблокирован"))
                 .shouldBe(Condition.visible);

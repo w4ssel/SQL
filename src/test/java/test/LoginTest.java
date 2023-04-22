@@ -66,9 +66,8 @@ public class LoginTest {
     void shouldGetBlockedSystemIfIncorrectPassword3Times() {
         var authInfo = DataHelper.getAuthInfoWithIncorrectPass();
         loginPage.validLogin(authInfo);
-        $("[data-test-id=action-login]").click();
-        $("[data-test-id=action-login]").click();
-        loginPage.BlockedSystemNotification();
+        loginPage.clickButton2Times();
+        loginPage.blockedSystemNotification();
 
     }
 
